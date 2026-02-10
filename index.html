@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contoh Vila</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0F766E', 
+            accent: '#F59E0B', 
+            dark: '#0F172A'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+ <link rel="stylesheet" href="assets/style/public.css">
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans overflow-x-hidden">
+  <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/70 backdrop-blur">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold tracking-wide text-white">Contoh<span class="text-accent">Vila</span></h1>
+      <ul class="hidden md:flex gap-8 text-sm">
+        <li><a href="#" class="hover:text-accent">Home</a></li>
+        <li><a href="#villas" class="hover:text-accent">Villas</a></li>
+        <li><a href="#services" class="hover:text-accent">Services</a></li>
+        <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+      </ul>
+      <i class="fas fa-bars md:hidden text-xl"></i>
+    </nav>
+  </header>
+
+  <section class="min-h-screen flex items-center justify-center bg-cover bg-center relative" style="background-image:url('https://images.unsplash.com/photo-1501117716987-c8e1ecb210c8');">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative text-center max-w-2xl px-6 animate-on-scroll">
+      <h2 class="text-4xl md:text-6xl font-bold text-white leading-tight">Luxury Escape<br/>In Paradise</h2>
+      <p class="mt-6 text-slate-300">Rasakan ketenangan vila  dengan sentuhan alam dan layanan kelas dunia.</p>
+      <button class="mt-10 px-8 py-3 rounded-full bg-accent text-slate-900 font-semibold hover:scale-105 transition">Explore Villas</button>
+    </div>
+  </section>
+
+  <section id="villas" class="py-24 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-14">Our Signature Villas</h3>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="h-56 w-full object-cover" />
+          <div class="p-6">
+            <h4 class="text-xl font-semibold">Ocean View Villa</h4>
+            <p class="text-sm text-slate-400 mt-2">Pemandangan laut langsung dari kamar tidur Anda.</p>
+          </div>
+        </div>
+        <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39" class="h-56 w-full object-cover" />
+          <div class="p-6">
+            <h4 class="text-xl font-semibold">Private Pool Villa</h4>
+            <p class="text-sm text-slate-400 mt-2">Kolam pribadi dengan suasana tropis eksklusif.</p>
+          </div>
+        </div>
+        <div class="bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1582719478185-2d6c9f69b1fd" class="h-56 w-full object-cover" />
+          <div class="p-6">
+            <h4 class="text-xl font-semibold">Garden Villa</h4>
+            <p class="text-sm text-slate-400 mt-2">Privasi maksimal dengan nuansa hijau alami.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-24 bg-slate-950">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-16">Exclusive Services</h3>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="text-center animate-on-scroll">
+          <i class="fas fa-spa text-4xl text-accent"></i>
+          <h4 class="mt-4 font-semibold">Luxury Spa</h4>
+          <p class="text-sm text-slate-400 mt-2">Relaksasi terbaik dengan terapis profesional.</p>
+        </div>
+        <div class="text-center animate-on-scroll">
+          <i class="fas fa-utensils text-4xl text-accent"></i>
+          <h4 class="mt-4 font-semibold">Fine Dining</h4>
+          <p class="text-sm text-slate-400 mt-2">Menu eksklusif dari chef internasional.</p>
+        </div>
+        <div class="text-center animate-on-scroll">
+          <i class="fas fa-water text-4xl text-accent"></i>
+          <h4 class="mt-4 font-semibold">Infinity Pool</h4>
+          <p class="text-sm text-slate-400 mt-2">Kolam dengan panorama alam terbuka.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-slate-900">
+    <div class="max-w-xl mx-auto text-center px-6 animate-on-scroll">
+      <h3 class="text-3xl font-bold">Book Your Stay</h3>
+      <p class="text-slate-400 mt-4">Nikmati pengalaman menginap yang tak terlupakan.</p>
+      <button class="mt-8 px-10 py-3 rounded-full bg-primary hover:bg-accent hover:text-slate-900 transition">Contact Us</button>
+    </div>
+  </section>
+
+
+  <footer class="bg-slate-950 py-6 text-center text-sm text-slate-500">
+    © 2026 Contoh Vila Resort Villa. All Rights Reserved.
+  </footer>
+
+
+<script src="assets/js/public.js"></script>
+</body>
+</html>

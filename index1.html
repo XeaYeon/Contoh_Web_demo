@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contoh Villa </title>
+
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f766e',
+                        accent: '#facc15',
+                        dark: '#0f172a'
+                    }
+                }
+            }
+        }
+    </script>
+
+  
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0f766e;
+            border-radius: 10px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-link {
+            position: relative;
+        }
+
+        .mobile-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 2px;
+            background: #0f766e;
+            transition: width 0.3s ease;
+        }
+
+        .mobile-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-dark bg-white">
+
+ 
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-transform duration-300">
+        <div
+            class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center bg-white/70 backdrop-blur-md rounded-b-2xl">
+            <h1 class="text-xl font-bold text-primary">ContohVilla</h1>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-8 font-medium">
+                <li><a href="#about" class="hover:text-primary">About</a></li>
+                <li><a href="#villa" class="hover:text-primary">Villa</a></li>
+                <li><a href="#services" class="hover:text-primary">Services</a></li>
+                <li><a href="#contact" class="hover:text-primary">Contact</a></li>
+            </ul>
+
+            <!-- Burger Button -->
+            <button id="burgerBtn" class="md:hidden text-2xl text-dark z-[60]">
+                <i id="burgerIcon" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobileMenu" class="fixed inset-0 bg-dark text-white flex flex-col justify-between
+         translate-y-full transition-transform duration-500 ease-in-out z-50">
+
+        <div class="px-8 pt-24">
+            <h2 class="text-3xl font-bold mb-12 text-primary">Menu</h2>
+
+            <ul class="flex flex-col gap-8 text-2xl font-semibold">
+                <li><a href="#about" class="mobile-link">About</a></li>
+                <li><a href="#villa" class="mobile-link">Villa</a></li>
+                <li><a href="#services" class="mobile-link">Services</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="px-8 pb-10">
+            <p class="text-gray-400 mb-6 text-sm">
+                Experience luxury tropical living with Contoh Villa .
+            </p>
+
+            <button class="w-full py-4 bg-primary rounded-full font-semibold hover:bg-teal-700 transition">
+                Book Your Stay
+            </button>
+        </div>
+    </div>
+
+
+    <section class="min-h-screen flex items-center bg-cover bg-center"
+        style="background-image:url('https://images.unsplash.com/photo-1501117716987-c8e1ecb2103d');">
+        <div class="bg-black/50 w-full min-h-screen flex items-center">
+            <div class="max-w-4xl mx-auto px-6 text-white reveal">
+                <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+                    Experience Luxury <br /> Tropical Living
+                </h2>
+                <p class="mt-6 text-lg text-gray-200">
+                    Private  villa dengan panorama alam yang menenangkan dan pelayanan premium.
+                </p>
+                <button
+                    class="mt-8 px-8 py-4 bg-primary hover:bg-teal-700 rounded-full text-white font-semibold transition">
+                    Book Your Stay
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <img class="rounded-3xl shadow-lg reveal"
+                src="https://images.unsplash.com/photo-1523217582562-09d0def993a6" />
+            <div class="reveal">
+                <h3 class="text-3xl font-bold mb-6">Tentang Contoh Villa</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Contoh Villa  menghadirkan pengalaman menginap eksklusif dengan desain modern,
+                    alam tropis, dan kenyamanan kelas dunia.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="villa" class="bg-slate-50 py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-16 reveal">Pilihan Villa</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl shadow-md overflow-hidden reveal">
+                    <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2c89" />
+                    <div class="p-6">
+                        <h4 class="font-semibold text-xl mb-2">Ocean View Villa</h4>
+                        <p class="text-gray-600">Pemandangan laut dengan private infinity pool.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl shadow-md overflow-hidden reveal">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" />
+                    <div class="p-6">
+                        <h4 class="font-semibold text-xl mb-2">Garden Villa</h4>
+                        <p class="text-gray-600">Nuansa hijau alami dan suasana tenang.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl shadow-md overflow-hidden reveal">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" />
+                    <div class="p-6">
+                        <h4 class="font-semibold text-xl mb-2">Family Villa</h4>
+                        <p class="text-gray-600">Luas, nyaman, cocok untuk keluarga.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 max-w-7xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-16 reveal">Fasilitas Premium</h3>
+        <div class="grid md:grid-cols-3 gap-10 text-center">
+            <div class="reveal">
+                <i class="fa-solid fa-spa text-4xl text-primary mb-4"></i>
+                <h4 class="font-semibold text-xl">Luxury Spa</h4>
+            </div>
+            <div class="reveal">
+                <i class="fa-solid fa-person-swimming text-4xl text-primary mb-4"></i>
+                <h4 class="font-semibold text-xl">Infinity Pool</h4>
+            </div>
+            <div class="reveal">
+                <i class="fa-solid fa-utensils text-4xl text-primary mb-4"></i>
+                <h4 class="font-semibold text-xl">Fine Dining</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-dark text-white py-20">
+        <div class="max-w-4xl mx-auto px-6 text-center reveal">
+            <h3 class="text-3xl font-bold mb-6">Book Your Escape</h3>
+            <p class="text-gray-300 mb-8">
+                Hubungi kami untuk reservasi dan informasi lebih lanjut.
+            </p>
+            <button class="px-8 py-4 bg-primary rounded-full hover:bg-teal-700 transition">
+                Contact Us
+            </button>
+        </div>
+    </section>
+
+    <footer class="py-6 text-center text-gray-500 text-sm">
+        © 2026 Contoh Villa . All Rights Reserved.
+    </footer>
+
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+
+        function revealOnScroll() {
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    </script>
+    <script>
+        const burgerBtn = document.getElementById('burgerBtn');
+        const burgerIcon = document.getElementById('burgerIcon');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navbar = document.getElementById('navbar');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        let menuOpen = false;
+
+        burgerBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+
+            mobileMenu.classList.toggle('translate-y-full');
+
+            burgerIcon.classList.toggle('fa-bars');
+            burgerIcon.classList.toggle('fa-xmark');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-y-full');
+                burgerIcon.classList.add('fa-bars');
+                burgerIcon.classList.remove('fa-xmark');
+                menuOpen = false;
+            });
+        });
+
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll && currentScroll > 100 && !menuOpen) {
+                navbar.classList.add('-translate-y-full');
+            } else {
+                navbar.classList.remove('-translate-y-full');
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
+
+
+</body>
+
+</html>
